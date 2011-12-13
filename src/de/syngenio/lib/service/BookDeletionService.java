@@ -1,11 +1,8 @@
 package de.syngenio.lib.service;
 
-import de.syngenio.lib.dao.BookDao;
 import de.syngenio.lib.io.CharacterReader;
 
 public class BookDeletionService extends BookServiceBase{
-
-	private BookDao bookDao;
 
 	@Override
 	public void optionSelected() {
