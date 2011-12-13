@@ -9,7 +9,7 @@ import de.syngenio.lib.io.CharacterReader;
 
 public abstract class BookServiceBase implements IMenuChoiceService{
 
-	private BookDao bookDao;
+	protected BookDao bookDao;
 
 	public BookDao getBookDao() {
 		return bookDao;
