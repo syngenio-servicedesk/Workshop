@@ -34,6 +34,7 @@ public class GitLibrary {
 
 	public GitLibrary() {
 		bookShowService.setBookDao(new BookDao());
+		bookCreationService.setBookDao(new BookDao());
 	}
 
 	/**
