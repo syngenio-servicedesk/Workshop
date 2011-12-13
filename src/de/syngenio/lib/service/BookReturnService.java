@@ -4,7 +4,7 @@ import de.syngenio.lib.dao.BookDao;
 import de.syngenio.lib.domainobject.Book;
 import de.syngenio.lib.io.CharacterReader;
 
-public class BookReturnService implements IMenuChoiceService{
+public class BookReturnService extends BookServiceBase{
 
 	static void p(Object o) {
 		System.out.println(o);
