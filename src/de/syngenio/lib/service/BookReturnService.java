@@ -1,6 +1,6 @@
 package de.syngenio.lib.service;
 
-public class BookReturnService implements IMenuChoiceService{
+public class BookReturnService extends BookServiceBase{
 
 	static void p(Object o) {
 		System.out.println(o);
