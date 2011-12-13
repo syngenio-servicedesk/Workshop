@@ -13,7 +13,6 @@ import de.syngenio.lib.service.BookRentService;
 import de.syngenio.lib.service.BookReturnService;
 import de.syngenio.lib.service.BookShowService;
 import de.syngenio.lib.service.DoNothingService;
-import de.syngenio.lib.service.BookReturnService;
 import de.syngenio.lib.service.IMenuChoiceService;
 
 public class GitLibrary {
