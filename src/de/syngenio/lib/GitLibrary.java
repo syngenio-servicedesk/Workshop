@@ -10,6 +10,7 @@ import de.syngenio.lib.service.BookCreateService;
 import de.syngenio.lib.service.BookEditService;
 import de.syngenio.lib.service.BookShowService;
 import de.syngenio.lib.service.DoNothingService;
+import de.syngenio.lib.service.BookReturnService;
 import de.syngenio.lib.service.IMenuChoiceService;
 
 public class GitLibrary {
@@ -30,7 +31,7 @@ public class GitLibrary {
 
 	private IMenuChoiceService bookRentService;
 
-	private IMenuChoiceService bookReturnService;
+	private IMenuChoiceService bookReturnService = new BookReturnService();
 
 	public GitLibrary() {
 		bookShowService.setBookDao(new BookDao());
@@ -67,8 +68,7 @@ public class GitLibrary {
 
 	}
 
-	private void printOption(int i, String string,
-			IMenuChoiceService menuChoiceService) {
+	private void printOption(int i, String string, IMenuChoiceService menuChoiceService) {
 		System.out.println("(" + i + ") " + string);
 		serviceHandlingChoice.put(i, menuChoiceService);
 	}
