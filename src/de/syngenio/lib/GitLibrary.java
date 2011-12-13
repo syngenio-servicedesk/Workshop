@@ -7,7 +7,10 @@ import de.syngenio.lib.dao.BookDao;
 import de.syngenio.lib.domainobject.Book;
 import de.syngenio.lib.io.CharacterReader;
 import de.syngenio.lib.service.BookCreateService;
+import de.syngenio.lib.service.BookDeletionService;
 import de.syngenio.lib.service.BookEditService;
+import de.syngenio.lib.service.BookRentService;
+import de.syngenio.lib.service.BookReturnService;
 import de.syngenio.lib.service.BookShowService;
 import de.syngenio.lib.service.DoNothingService;
 import de.syngenio.lib.service.IMenuChoiceService;
@@ -26,11 +29,11 @@ public class GitLibrary {
 
 	private Map<Integer, IMenuChoiceService> serviceHandlingChoice = new HashMap<Integer, IMenuChoiceService>();
 
-	private IMenuChoiceService bookDeletionService;
+	private IMenuChoiceService bookDeletionService=new BookDeletionService();
 
-	private IMenuChoiceService bookRentService;
+	private IMenuChoiceService bookRentService=new BookRentService();
 
-	private IMenuChoiceService bookReturnService;
+	private IMenuChoiceService bookReturnService=new BookReturnService();
 
 	public GitLibrary() {
 		bookShowService.setBookDao(new BookDao());

@@ -4,7 +4,7 @@ public class BookRentService implements IMenuChoiceService{
 
 	@Override
 	public void optionSelected() {
-		throw new UnsupportedOperationException();
+		System.out.println("Ausleihen von Büchern momentan noch nicht supported");
 	}
 
 }
