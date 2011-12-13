@@ -29,11 +29,13 @@ public class GitLibrary {
 	private BookEditService   bookEditService      = new BookEditService(bookDao);
 
 	private IMenuChoiceService bookDeletionService = new BookDeletionService();
-	private IMenuChoiceService bookRentService     = new BookRentService();
+	private BookRentService bookRentService        = new BookRentService();
 	private IMenuChoiceService bookReturnService   = new BookReturnService();
 
 	public GitLibrary() {
 		bookShowService.setBookDao(new BookDao());
+		bookCreationService.setBookDao(new BookDao());
+		bookRentService.setBookDao(new BookDao());
 	}
 
 	/**
@@ -45,7 +47,7 @@ public class GitLibrary {
 
 	public void start() {
 		createBook("Harry Potter", "9983-78978");
-		createBook("Illuminati", "790823-89079");
+		createBook("Illuminati", "666666-666");
 		printOptions();
 		System.out.println("Goodbye");
 	}
