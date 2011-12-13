@@ -8,8 +8,6 @@ import de.syngenio.lib.io.CharacterReader;
 
 public class BookRentService extends BookServiceBase{
 
-	private BookDao bookDao;
-	
 	@Override
 	public void optionSelected() {
 		Collection<Book> booksFound = bookDao.findAllBooks();
