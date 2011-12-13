@@ -19,12 +19,19 @@ public class BookDaoTest {
 	}
 	
 	@Test
-	public void testRemoveBook() {
+	public void testRemoveBookSize() {
 		assertEquals(2,bookDao.findAllBooks().size());
 		bookDao.deleteBook(2);
 		assertEquals(1,bookDao.findAllBooks().size());
 	}
-
+	
+	@Test
+	public void testRemoveBookExactly() {
+		assertEquals("test1",bookDao.findBookById(2).getName());
+		bookDao.deleteBook(2);
+		assertEquals(null,bookDao.findBookById(2));
+	}
+	
 	private void createBook(String nameOfBook, String isbn) {
 		Book bookToSave = new Book();
 		bookToSave.setName(nameOfBook);

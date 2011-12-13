@@ -18,7 +18,8 @@ public class BookDao {
 		BookRegistry.registerBook(bookToSave);
 	}
 
-	public void deleteBook(int i) {
+	public void deleteBook(long bookId) {
+		BookRegistry.unregisterBook(bookId);
 		
 	}
 }
