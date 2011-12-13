@@ -4,7 +4,7 @@ public class BookCreateService extends BookServiceBase{
 
 	@Override
 	public void optionSelected() {
-		throw new UnsupportedOperationException();
+		System.out.println("Operation create not supported yet.");
 	}
 
 }

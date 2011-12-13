@@ -4,7 +4,7 @@ public class BookDeletionService extends BookServiceBase{
 
 	@Override
 	public void optionSelected() {
-		throw new UnsupportedOperationException();
+		System.out.println("Option not supported, please come back later");
 	}
 
 }
