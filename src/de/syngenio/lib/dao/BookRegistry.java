@@ -25,4 +25,8 @@ public class BookRegistry {
 		availableBooks.put(bookIndex, bookToSave);
 	}
 
+	public static void unregisterBook(long bookId) {
+		availableBooks.remove(bookId);
+	}
+
 }
