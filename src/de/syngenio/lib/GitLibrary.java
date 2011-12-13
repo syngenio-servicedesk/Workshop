@@ -29,12 +29,13 @@ public class GitLibrary {
 	private BookCreateService bookCreationService  = new BookCreateService();
 	private BookEditService   bookEditService      = new BookEditService();
 
-	private IMenuChoiceService bookDeletionService = new BookDeletionService();
+	private BookDeletionService bookDeletionService = new BookDeletionService();
 	private IMenuChoiceService bookRentService     = new BookRentService();
 	private IMenuChoiceService bookReturnService   = new BookReturnService();
 
 	public GitLibrary() {
 		bookShowService.setBookDao(new BookDao());
+		bookDeletionService.setBookDao(new BookDao());
 	}
 
 	/**
