@@ -63,7 +63,11 @@ public class GitLibrary {
 			printOption(6, "Buch zurück geben", bookReturnService);
 			printOption(7, "Git lib beenden", new DoNothingService());
 			option = CharacterReader.readIntegerFromConsole();
-			serviceHandlingChoice.get(option).optionSelected();
+      if (-1 == option) {
+        printOptions();
+      } else {
+			  serviceHandlingChoice.get(option).optionSelected();
+      }
 		}
 		
 
