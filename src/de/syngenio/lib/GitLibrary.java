@@ -26,7 +26,7 @@ public class GitLibrary {
 
 	private BookShowService   bookShowService      = new BookShowService();
 	private BookCreateService bookCreationService  = new BookCreateService();
-	private BookEditService   bookEditService      = new BookEditService();
+	private BookEditService   bookEditService      = new BookEditService(bookDao);
 
 	private IMenuChoiceService bookDeletionService = new BookDeletionService();
 	private IMenuChoiceService bookRentService     = new BookRentService();

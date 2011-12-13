@@ -7,7 +7,11 @@ import java.io.InputStreamReader;
 public class CharacterReader {
 
 	public static Integer readIntegerFromConsole(){
-		return Integer.valueOf(readString("Ihre Wahl: "));
+		return readIntegerFromConsole("Ihre Wahl: ");
+	}
+
+	public static Integer readIntegerFromConsole(String promt){
+		return Integer.valueOf(readString(promt));
 	}
 	
 	public static String readString(String prompt){
