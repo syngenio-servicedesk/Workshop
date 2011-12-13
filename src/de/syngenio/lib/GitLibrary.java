@@ -27,14 +27,14 @@ public class GitLibrary {
 	private BookShowService   bookShowService      = new BookShowService();
 	private BookCreateService bookCreationService  = new BookCreateService();
 	private BookEditService   bookEditService      = new BookEditService(bookDao);
-
-	private IMenuChoiceService bookDeletionService = new BookDeletionService();
+	private BookDeletionService bookDeletionService = new BookDeletionService();
 	private BookRentService bookRentService        = new BookRentService();
 	private IMenuChoiceService bookReturnService   = new BookReturnService();
 
 	public GitLibrary() {
 		bookShowService.setBookDao(new BookDao());
 		bookCreationService.setBookDao(new BookDao());
+		bookDeletionService.setBookDao(new BookDao());
 		bookRentService.setBookDao(new BookDao());
 	}
 
@@ -63,9 +63,13 @@ public class GitLibrary {
 			printOption(6, "Buch zurück geben", bookReturnService);
 			printOption(7, "Git lib beenden", new DoNothingService());
 			option = CharacterReader.readIntegerFromConsole();
-			serviceHandlingChoice.get(option).optionSelected();
+			if (-1 == option) {
+				printOptions();
+			} else {
+				serviceHandlingChoice.get(option).optionSelected();
+			}
 		}
-		
+
 
 	}
 

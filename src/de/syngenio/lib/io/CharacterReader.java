@@ -11,7 +11,11 @@ public class CharacterReader {
 	}
 
 	public static Integer readIntegerFromConsole(String promt){
-		return Integer.valueOf(readString(promt));
+		try {
+			return Integer.valueOf(readString(promt));
+		} catch (Throwable t) {
+			return -1;
+		}
 	}
 	
 	public static String readString(String prompt){
