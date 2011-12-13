@@ -15,7 +15,7 @@ public class BookRentService extends BookServiceBase{
 		for (Book book : booksFound) {
 			System.out.println("" + book);
 		}
-		System.out.println("Bitte waehlen Sie eine ID : ");
+	//	System.out.println("Bitte waehlen Sie eine ID : ");
 		Integer chosenBookId = null;
 		try {
 			chosenBookId = CharacterReader.readIntegerFromConsole();
@@ -27,11 +27,13 @@ public class BookRentService extends BookServiceBase{
 		Book chosenBook = bookDao.findBookById(chosenBookId);
 		if (chosenBook == null || chosenBook.isRented()) {
 			System.out.println("Das Buch kann nicht gefunden werden, oder ist bereits verliehen.");
+			CharacterReader.readString("Bitte drücken sie irgendeine Taste für weiter");
 			return;
 		}
 		chosenBook.setRented(true);
 		
 		System.out.println("Sie haben " + chosenBook.getName() + " ausgeliehen.");
+		CharacterReader.readString("Bitte drücken sie irgendeine Taste für weiter");
 	}
 
 }
