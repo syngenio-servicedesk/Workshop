@@ -6,13 +6,9 @@ import de.syngenio.lib.dao.BookDao;
 import de.syngenio.lib.domainobject.Book;
 import de.syngenio.lib.io.CharacterReader;
 
-public class BookRentService implements IMenuChoiceService{
+public class BookRentService extends BookServiceBase{
 
 	private BookDao bookDao;
-	
-	public BookRentService(BookDao bookDao) {
-		this.bookDao = bookDao;
-	}
 	
 	@Override
 	public void optionSelected() {

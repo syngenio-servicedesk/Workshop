@@ -1,6 +1,6 @@
 package de.syngenio.lib.service;
 
-public class BookEditService implements IMenuChoiceService{
+public class BookEditService extends BookServiceBase{
 
 	@Override
 	public void optionSelected() {

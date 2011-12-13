@@ -20,4 +20,8 @@ public class CharacterReader {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	public static Long readLongFromConsole(){
+		return Long.valueOf(readString("Ihre Wahl: "));
+	}
 }
